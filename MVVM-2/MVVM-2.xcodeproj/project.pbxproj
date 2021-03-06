@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E510A7D25F3838000C217F9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510A7C25F3838000C217F9 /* ViewModel.swift */; };
+		7E510A8025F3842D00C217F9 /* TableViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510A7F25F3842D00C217F9 /* TableViewModelType.swift */; };
 		7E7DBA0225F2C3BF0047F404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7DBA0125F2C3BF0047F404 /* AppDelegate.swift */; };
 		7E7DBA0425F2C3BF0047F404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7DBA0325F2C3BF0047F404 /* SceneDelegate.swift */; };
 		7E7DBA0925F2C3BF0047F404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7DBA0725F2C3BF0047F404 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E510A7C25F3838000C217F9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7E510A7F25F3842D00C217F9 /* TableViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModelType.swift; sourceTree = "<group>"; };
 		7E7DB9FE25F2C3BF0047F404 /* MVVM-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7DBA0125F2C3BF0047F404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E7DBA0325F2C3BF0047F404 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E510A8225F38B9800C217F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7E510A7C25F3838000C217F9 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7E510A8325F38C5100C217F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E7DBA0A25F2C3C50047F404 /* Assets.xcassets */,
+				7E7DBA0F25F2C3C50047F404 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7E510A8A25F38FD000C217F9 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7E7DBA0325F2C3BF0047F404 /* SceneDelegate.swift */,
+				7E7DBA0125F2C3BF0047F404 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		7E7DB9F525F2C3BF0047F404 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +90,11 @@
 		7E7DBA0025F2C3BF0047F404 /* MVVM-2 */ = {
 			isa = PBXGroup;
 			children = (
-				7E7DBA0125F2C3BF0047F404 /* AppDelegate.swift */,
-				7E7DBA0325F2C3BF0047F404 /* SceneDelegate.swift */,
-				7E7DBA1725F2C4D40047F404 /* TableViewController.swift */,
+				7E510A8A25F38FD000C217F9 /* Delegate */,
+				7E510A8225F38B9800C217F9 /* ViewModel */,
 				7E7DBA2225F2CA9B0047F404 /* View */,
 				7E7DBA2125F2CA890047F404 /* Model */,
-				7E7DBA0725F2C3BF0047F404 /* Main.storyboard */,
-				7E7DBA0A25F2C3C50047F404 /* Assets.xcassets */,
-				7E7DBA0C25F2C3C50047F404 /* LaunchScreen.storyboard */,
-				7E7DBA0F25F2C3C50047F404 /* Info.plist */,
+				7E510A8325F38C5100C217F9 /* Supporting Files */,
 			);
 			path = "MVVM-2";
 			sourceTree = "<group>";
@@ -77,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7E7DBA1B25F2C65B0047F404 /* Profile.swift */,
+				7E510A7F25F3842D00C217F9 /* TableViewModelType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +111,9 @@
 		7E7DBA2225F2CA9B0047F404 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7E7DBA0C25F2C3C50047F404 /* LaunchScreen.storyboard */,
+				7E7DBA0725F2C3BF0047F404 /* Main.storyboard */,
+				7E7DBA1725F2C4D40047F404 /* TableViewController.swift */,
 				7E7DBA1E25F2C9710047F404 /* TableViewCell.swift */,
 			);
 			path = View;
@@ -163,6 +193,8 @@
 				7E7DBA0225F2C3BF0047F404 /* AppDelegate.swift in Sources */,
 				7E7DBA1C25F2C65B0047F404 /* Profile.swift in Sources */,
 				7E7DBA1825F2C4D40047F404 /* TableViewController.swift in Sources */,
+				7E510A8025F3842D00C217F9 /* TableViewModelType.swift in Sources */,
+				7E510A7D25F3838000C217F9 /* ViewModel.swift in Sources */,
 				7E7DBA0425F2C3BF0047F404 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MVVM-2/Info.plist";
+				INFOPLIST_FILE = "MVVM-2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,7 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "MVVM-2/Info.plist";
+				INFOPLIST_FILE = "MVVM-2/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
