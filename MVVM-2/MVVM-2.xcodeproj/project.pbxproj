@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E00132025F4EE07001E9DEA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00131F25F4EE07001E9DEA /* DetailViewController.swift */; };
+		7E00132325F4EF1E001E9DEA /* DetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00132225F4EF1E001E9DEA /* DetailViewModelType.swift */; };
+		7E00132625F4EFFD001E9DEA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00132525F4EFFD001E9DEA /* DetailViewModel.swift */; };
 		7E510A7D25F3838000C217F9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510A7C25F3838000C217F9 /* ViewModel.swift */; };
 		7E510A8025F3842D00C217F9 /* TableViewViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E510A7F25F3842D00C217F9 /* TableViewViewModelType.swift */; };
 		7E7DBA0225F2C3BF0047F404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7DBA0125F2C3BF0047F404 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E00131F25F4EE07001E9DEA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7E00132225F4EF1E001E9DEA /* DetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelType.swift; sourceTree = "<group>"; };
+		7E00132525F4EFFD001E9DEA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7E510A7C25F3838000C217F9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		7E510A7F25F3842D00C217F9 /* TableViewViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewModelType.swift; sourceTree = "<group>"; };
 		7E7DB9FE25F2C3BF0047F404 /* MVVM-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +60,7 @@
 			children = (
 				7E510A7C25F3838000C217F9 /* ViewModel.swift */,
 				7E8605EC25F3C0D400FFD66C /* TableViewCellViewModel.swift */,
+				7E00132525F4EFFD001E9DEA /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 				7E7DBA1B25F2C65B0047F404 /* Profile.swift */,
 				7E510A7F25F3842D00C217F9 /* TableViewViewModelType.swift */,
 				7E8605E925F3BFA300FFD66C /* TableViewCellViewModelType.swift */,
+				7E00132225F4EF1E001E9DEA /* DetailViewModelType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 				7E7DBA0725F2C3BF0047F404 /* Main.storyboard */,
 				7E7DBA1725F2C4D40047F404 /* TableViewController.swift */,
 				7E7DBA1E25F2C9710047F404 /* TableViewCell.swift */,
+				7E00131F25F4EE07001E9DEA /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,7 +210,10 @@
 				7E7DBA1C25F2C65B0047F404 /* Profile.swift in Sources */,
 				7E7DBA1825F2C4D40047F404 /* TableViewController.swift in Sources */,
 				7E510A8025F3842D00C217F9 /* TableViewViewModelType.swift in Sources */,
+				7E00132325F4EF1E001E9DEA /* DetailViewModelType.swift in Sources */,
+				7E00132625F4EFFD001E9DEA /* DetailViewModel.swift in Sources */,
 				7E510A7D25F3838000C217F9 /* ViewModel.swift in Sources */,
+				7E00132025F4EE07001E9DEA /* DetailViewController.swift in Sources */,
 				7E8605ED25F3C0D400FFD66C /* TableViewCellViewModel.swift in Sources */,
 				7E7DBA0425F2C3BF0047F404 /* SceneDelegate.swift in Sources */,
 			);
