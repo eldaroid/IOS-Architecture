@@ -8,6 +8,7 @@
 import Foundation
 
 class DetailViewModel: DetailViewModelType {
+    var age: Box<String?> = Box(nil)
     
     private var profile: Profile
     

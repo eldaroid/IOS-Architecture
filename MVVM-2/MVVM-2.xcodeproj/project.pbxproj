@@ -20,6 +20,7 @@
 		7E7DBA1825F2C4D40047F404 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7DBA1725F2C4D40047F404 /* TableViewController.swift */; };
 		7E7DBA1C25F2C65B0047F404 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7DBA1B25F2C65B0047F404 /* Profile.swift */; };
 		7E7DBA1F25F2C9710047F404 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7DBA1E25F2C9710047F404 /* TableViewCell.swift */; };
+		7E84914525F57F790057B522 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84914425F57F790057B522 /* Box.swift */; };
 		7E8605EA25F3BFA300FFD66C /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8605E925F3BFA300FFD66C /* TableViewCellViewModelType.swift */; };
 		7E8605ED25F3C0D400FFD66C /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8605EC25F3C0D400FFD66C /* TableViewCellViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		7E7DBA1725F2C4D40047F404 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E7DBA1B25F2C65B0047F404 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		7E7DBA1E25F2C9710047F404 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7E84914425F57F790057B522 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		7E8605E925F3BFA300FFD66C /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		7E8605EC25F3C0D400FFD66C /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				7E7DBA2225F2CA9B0047F404 /* View */,
 				7E510A8225F38B9800C217F9 /* ViewModel */,
 				7E510A8325F38C5100C217F9 /* Supporting Files */,
+				7E84914425F57F790057B522 /* Box.swift */,
 			);
 			path = "MVVM-2";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				7E7DBA1C25F2C65B0047F404 /* Profile.swift in Sources */,
 				7E7DBA1825F2C4D40047F404 /* TableViewController.swift in Sources */,
 				7E510A8025F3842D00C217F9 /* TableViewViewModelType.swift in Sources */,
+				7E84914525F57F790057B522 /* Box.swift in Sources */,
 				7E00132325F4EF1E001E9DEA /* DetailViewModelType.swift in Sources */,
 				7E00132625F4EFFD001E9DEA /* DetailViewModel.swift in Sources */,
 				7E510A7D25F3838000C217F9 /* ViewModel.swift in Sources */,
