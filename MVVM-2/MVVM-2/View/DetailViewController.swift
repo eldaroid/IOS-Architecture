@@ -11,21 +11,16 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var viewModel: DetailViewModelType?
 
-        // Do any additional setup after loading the view.
+    // не совсем подходило viewDidLoad, потому что такой view если один раз загрузился, то больше не меняется
+    // viewWillAppear - это метод, который отрабатывает до того,
+    // как view появится на экране (то есть он загружен, но еще не появился)
+    // и этот метод отрабатывает каждый раз, когда появляется экран
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard let viewModel = viewModel else { return }
+        self.textLabel.text = viewModel.description
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
