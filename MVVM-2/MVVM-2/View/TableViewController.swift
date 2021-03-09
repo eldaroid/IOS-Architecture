@@ -11,6 +11,10 @@ class TableViewController: UITableViewController {
     
     private var viewModel: TableViewViewModelType?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel = ViewModel()
+    }
     override func viewDidLoad() {
         super.viewDidLoad() 
         viewModel = ViewModel()
@@ -36,7 +40,6 @@ class TableViewController: UITableViewController {
         
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         cell.viewModel = cellViewModel
-
         return cell
     }
 

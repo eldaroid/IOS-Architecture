@@ -21,25 +21,25 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         guard let viewModel = viewModel else { return }
-        self.textLabel.text = viewModel.description
+        self.textLabel.text = String(describing: viewModel.description)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.age.bind(listener: { [unowned self] in
+        viewModel?.description.bind(listener: { [unowned self] in
             guard let string = $0 else { return }
             self.textLabel.text = string
         })
         
-        delay(delay: 5.0) { [unowned self] in
-            self.viewModel?.age.value = "Some new value"
-        }
-    }
-    
-    private func delay(delay: Double, closure: @escaping () -> () ) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            closure()
-        }
+//        delay(delay: 5.0) { [unowned self] in
+//            self.viewModel?.age.value = "Some new value"
+//        }
+//    }
+//    
+//    private func delay(delay: Double, closure: @escaping () -> () ) {
+//        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+//            closure()
+//        }
     }
 }
