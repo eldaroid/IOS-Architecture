@@ -9,8 +9,6 @@ import Foundation
 
 class DetailViewModel: DetailViewModelType {
     
-    var new_description: Box<String?> = Box(nil)
-    
     private var profile: Profile
     
     var description: String {

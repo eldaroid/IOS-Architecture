@@ -10,4 +10,5 @@ import Foundation
 protocol TableViewCellViewModelType: class {
     var fullName: String { get }
     var age: String { get }
+//    var new_description: Box<String?> { get }
 }

@@ -9,6 +9,9 @@ import Foundation
 
 class TableViewCellViewModel: TableViewCellViewModelType {
     
+    
+//    var new_description: Box<String?> = Box(nil)
+    
     private var profile: Profile
     
     var fullName: String {

@@ -14,13 +14,8 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel = ViewModel()
+        
     }
-    override func viewDidLoad() {
-        super.viewDidLoad() 
-        viewModel = ViewModel()
-    }
-    
-    // MARK: - Table view data source
 
     // по умолчанию так и так 1 секция возвращается
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,6 +35,19 @@ class TableViewController: UITableViewController {
         
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         cell.viewModel = cellViewModel
+        
+        
+        viewModel.new_description.bind(listener: { [unowned cell] in
+            guard let string = $0 else { return }
+            cell.fullNameLabel.text = string
+            cell.ageLabel.text = string
+        })
+        
+        delay(delay: 1.0) { [unowned self] in
+            self.viewModel?.new_description.value = "Some new value"
+        }
+        
+        
         return cell
     }
 
@@ -61,6 +69,12 @@ class TableViewController: UITableViewController {
                 dvc.viewModel = viewModel.viewModelForSelectedRow()
             }
                 
+        }
+    }
+    
+    private func delay(delay: Double, closure: @escaping () -> () ) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            closure()
         }
     }
 }

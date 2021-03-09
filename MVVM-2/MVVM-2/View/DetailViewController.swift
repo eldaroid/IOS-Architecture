@@ -23,23 +23,5 @@ class DetailViewController: UIViewController {
         guard let viewModel = viewModel else { return }
         self.textLabel.text = String(describing: viewModel.description)
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        viewModel?.new_description.bind(listener: { [unowned self] in
-            guard let string = $0 else { return }
-            self.textLabel.text = string
-        })
 
-        delay(delay: 2.0) { [unowned self] in
-            self.viewModel?.new_description.value = "Some new value"
-        }
-    }
-    
-    private func delay(delay: Double, closure: @escaping () -> () ) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            closure()
-        }
-    }
 }
