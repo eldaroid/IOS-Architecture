@@ -11,7 +11,7 @@ class ViewModel: TableViewViewModelType {
 
     private var selectedIndexPath: IndexPath?
 
-    var new_description: Box<String?> = Box(nil)
+    var new_description: Box<String?> = Box([nil, nil])
     
     func viewModelForSelectedRow() -> DetailViewModelType? {
         guard let selectedIndexPath = selectedIndexPath else { return nil }
@@ -34,5 +34,6 @@ class ViewModel: TableViewViewModelType {
     var profiles = [
         Profile(name: "John", secondName: "Smith", age: 33),
         Profile(name: "Max", secondName: "Kolby", age: 21),
-        Profile(name: "Mark", secondName: "Selman", age: 55)]
+        Profile(name: "Mark", secondName: "Selman", age: 55),
+        Profile(name: "rk", secondName: "San", age: 45)]
 }

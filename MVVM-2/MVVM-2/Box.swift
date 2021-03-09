@@ -9,22 +9,22 @@ import Foundation
 
 class Box<T> {
     
-    typealias Listener = (T) -> ()
+    typealias Listener = (T, T) -> ()
     
     var listener: Listener?
     
-    var value: T {
+    var value: [T] {
         didSet {
-            listener?(value)
+            listener!(value[0], value[1])
         }
     }
     
     func bind(listener: @escaping Listener) {
         self.listener = listener
-        listener(value)
+        listener(value[0], value[1])
     }
     
-    init(_ value: T) {
+    init(_ value: [T]) {
         self.value = value
     }
 }

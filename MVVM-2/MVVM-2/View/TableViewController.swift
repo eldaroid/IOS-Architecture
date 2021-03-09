@@ -14,17 +14,14 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel = ViewModel()
-        
     }
 
     // по умолчанию так и так 1 секция возвращается
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return viewModel?.numberOfRow() ?? 0
     }
 
@@ -36,17 +33,15 @@ class TableViewController: UITableViewController {
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         cell.viewModel = cellViewModel
         
-        
         viewModel.new_description.bind(listener: { [unowned cell] in
-            guard let string = $0 else { return }
+            guard let string = $0, let string2 = $1 else { return }
             cell.fullNameLabel.text = string
-            cell.ageLabel.text = string
+            cell.ageLabel.text = string2
         })
         
         delay(delay: 1.0) { [unowned self] in
-            self.viewModel?.new_description.value = "Some new value"
+            self.viewModel?.new_description.value = ["Some new value", "Age"]
         }
-        
         
         return cell
     }
