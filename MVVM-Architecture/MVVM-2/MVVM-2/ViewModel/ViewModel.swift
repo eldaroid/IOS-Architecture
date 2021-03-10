@@ -10,8 +10,6 @@ import Foundation
 class ViewModel: TableViewViewModelType {
 
     private var selectedIndexPath: IndexPath?
-
-    var new_description: Box<String?> = Box([nil, nil])
     
     func viewModelForSelectedRow() -> DetailViewModelType? {
         guard let selectedIndexPath = selectedIndexPath else { return nil }
@@ -36,4 +34,14 @@ class ViewModel: TableViewViewModelType {
         Profile(name: "Max", secondName: "Kolby", age: 21),
         Profile(name: "Mark", secondName: "Selman", age: 55),
         Profile(name: "rk", secondName: "San", age: 45)]
+    
+    var new_description: Box<String?> = Box([nil, nil])
+    
+    func delay(delay: Double, closure: @escaping () -> () ) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            closure()
+        }
+    }
+    
+    
 }

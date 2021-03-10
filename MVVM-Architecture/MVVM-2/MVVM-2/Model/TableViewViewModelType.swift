@@ -13,5 +13,7 @@ protocol TableViewViewModelType {
     
     func viewModelForSelectedRow() -> DetailViewModelType?
     func selectRow(atIndexPath indexPath: IndexPath)
+    
     var new_description: Box<String?> { get }
+    func delay(delay: Double, closure: @escaping () -> () )
 }

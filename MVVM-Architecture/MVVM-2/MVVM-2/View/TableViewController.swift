@@ -14,6 +14,23 @@ class TableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel = ViewModel()
+        
+        // delay for data binding
+        viewModel!.delay(delay: 1.0) { [unowned self] in
+            self.viewModel?.new_description.value = ["Some new value", "Age"]
+        }
+        
+//        viewModel!.new_description.bind(listener: { [unowned self] in
+//            guard let string = $0, let string2 = $1 else { return }
+//            for i in 0..<viewModel!.numberOfRow() {
+//                let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: IndexPath(item: i, section: 0)) as! TableViewCell
+////                print(IndexPath(item: i, section: 0))
+//                cell.fullNameLabel.text = string
+//                cell.ageLabel.text = string2
+//            }
+//        })
+        
+//        self.tableView.reloadData()
     }
 
     // по умолчанию так и так 1 секция возвращается
@@ -33,16 +50,21 @@ class TableViewController: UITableViewController {
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         cell.viewModel = cellViewModel
         
+        
+//         data binding
         viewModel.new_description.bind(listener: { [unowned cell] in
             guard let string = $0, let string2 = $1 else { return }
-            cell.fullNameLabel.text = string
-            cell.ageLabel.text = string2
+//            for i in 0..<viewModel.numberOfRow() {
+            
+            //если бы вот это уберем, то все заработает
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+//                print(IndexPath(item: i, section: 0))
+                cell.fullNameLabel.text = string
+                cell.ageLabel.text = string2
+            
         })
-        
-        delay(delay: 1.0) { [unowned self] in
-            self.viewModel?.new_description.value = ["Some new value", "Age"]
-        }
-        
+//        self.tableView.reloadData()
+
         return cell
     }
 
@@ -64,12 +86,6 @@ class TableViewController: UITableViewController {
                 dvc.viewModel = viewModel.viewModelForSelectedRow()
             }
                 
-        }
-    }
-    
-    private func delay(delay: Double, closure: @escaping () -> () ) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            closure()
         }
     }
 }

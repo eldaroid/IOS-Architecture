@@ -23,6 +23,7 @@
 		7E84914525F57F790057B522 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84914425F57F790057B522 /* Box.swift */; };
 		7E8605EA25F3BFA300FFD66C /* TableViewCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8605E925F3BFA300FFD66C /* TableViewCellViewModelType.swift */; };
 		7E8605ED25F3C0D400FFD66C /* TableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8605EC25F3C0D400FFD66C /* TableViewCellViewModel.swift */; };
+		7EFBFC6625F7A2990016FC93 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFBFC6525F7A2990016FC93 /* Delay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7E84914425F57F790057B522 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		7E8605E925F3BFA300FFD66C /* TableViewCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModelType.swift; sourceTree = "<group>"; };
 		7E8605EC25F3C0D400FFD66C /* TableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModel.swift; sourceTree = "<group>"; };
+		7EFBFC6525F7A2990016FC93 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				7E510A7C25F3838000C217F9 /* ViewModel.swift */,
 				7E8605EC25F3C0D400FFD66C /* TableViewCellViewModel.swift */,
 				7E00132525F4EFFD001E9DEA /* DetailViewModel.swift */,
+				7EFBFC6525F7A2990016FC93 /* Delay.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				7E00132625F4EFFD001E9DEA /* DetailViewModel.swift in Sources */,
 				7E510A7D25F3838000C217F9 /* ViewModel.swift in Sources */,
 				7E00132025F4EE07001E9DEA /* DetailViewController.swift in Sources */,
+				7EFBFC6625F7A2990016FC93 /* Delay.swift in Sources */,
 				7E8605ED25F3C0D400FFD66C /* TableViewCellViewModel.swift in Sources */,
 				7E7DBA0425F2C3BF0047F404 /* SceneDelegate.swift in Sources */,
 			);
