@@ -10,14 +10,21 @@ import UIKit
 class CommentsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
-}
-
-extension CommentsViewController: UITableViewDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NetworkService.shared.getData { (json) in
+            
+        }
+    }
 }
+
+//extension CommentsViewController: UITableViewDelegate {
+//    return 1
+//}
 
 extension CommentsViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
@@ -26,6 +33,4 @@ extension CommentsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) // as CommentCell
         return cell
     }
-    
-    
 }
