@@ -10,10 +10,11 @@ import Foundation
 protocol TableViewViewModelType {
     func numberOfRow() -> Int
     func cellViewModel(forIndexPath indexPath: IndexPath) -> TableViewCellViewModelType?
+    var profiles: [Profile] { get set }
     
     func viewModelForSelectedRow() -> DetailViewModelType?
     func selectRow(atIndexPath indexPath: IndexPath)
     
-    var new_description: Box<String?> { get }
+    var new_description: Box<Profile?> { get set }
     func delay(delay: Double, closure: @escaping () -> () )
 }

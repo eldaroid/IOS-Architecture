@@ -15,22 +15,23 @@ class TableViewController: UITableViewController {
         super.viewWillAppear(animated)
         viewModel = ViewModel()
         
+        viewModel?.new_description.bind(listener: { (listen) in
+            for i in 0..<listen.count {
+                guard let listen = listen[i] else { return }
+                self.viewModel?.profiles[i] = listen
+            }
+            print(self.viewModel!.profiles)
+            self.tableView.reloadData()
+        })
+
         // delay for data binding
-        viewModel!.delay(delay: 1.0) { [unowned self] in
-            self.viewModel?.new_description.value = ["Some new value", "Age"]
+        viewModel?.delay(delay: 1.0) { [unowned self] in
+            self.viewModel?.new_description.value = [
+                Profile(name: "Nikita", secondName: "Elizarov", age: 99),
+                Profile(name: "Eldar", secondName: "Popov", age: 88),
+                Profile(name: "Anastasia", secondName: "Klimova", age: 77),
+                Profile(name: "Ilya", secondName: "Kravetz", age: 66)]
         }
-        
-//        viewModel!.new_description.bind(listener: { [unowned self] in
-//            guard let string = $0, let string2 = $1 else { return }
-//            for i in 0..<viewModel!.numberOfRow() {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: IndexPath(item: i, section: 0)) as! TableViewCell
-////                print(IndexPath(item: i, section: 0))
-//                cell.fullNameLabel.text = string
-//                cell.ageLabel.text = string2
-//            }
-//        })
-        
-//        self.tableView.reloadData()
     }
 
     // по умолчанию так и так 1 секция возвращается
@@ -50,21 +51,6 @@ class TableViewController: UITableViewController {
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         cell.viewModel = cellViewModel
         
-        
-//         data binding
-        viewModel.new_description.bind(listener: { [unowned cell] in
-            guard let string = $0, let string2 = $1 else { return }
-//            for i in 0..<viewModel.numberOfRow() {
-            
-            //если бы вот это уберем, то все заработает
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-//                print(IndexPath(item: i, section: 0))
-                cell.fullNameLabel.text = string
-                cell.ageLabel.text = string2
-            
-        })
-//        self.tableView.reloadData()
-
         return cell
     }
 

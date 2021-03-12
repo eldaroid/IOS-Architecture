@@ -29,13 +29,13 @@ class ViewModel: TableViewViewModelType {
         return TableViewCellViewModel(profile: profile)
     } 
 
-    var profiles = [
+    public var profiles = [
         Profile(name: "John", secondName: "Smith", age: 33),
         Profile(name: "Max", secondName: "Kolby", age: 21),
         Profile(name: "Mark", secondName: "Selman", age: 55),
-        Profile(name: "rk", secondName: "San", age: 45)]
+        Profile(name: "Rick", secondName: "San", age: 45)]
     
-    var new_description: Box<String?> = Box([nil, nil])
+    var new_description: Box<Profile?> = Box([nil])
     
     func delay(delay: Double, closure: @escaping () -> () ) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
