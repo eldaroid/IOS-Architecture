@@ -1,1 +1,1 @@
-ddd
+Model-View-ViewModel architecture pattern
